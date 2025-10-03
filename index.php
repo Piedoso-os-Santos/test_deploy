@@ -1,5 +1,6 @@
 <?php
 
 echo "Helloo Word";
-echo "Testando..."
+echo "Testando...";
+echo "Comooo fao para funcioonar";
 ?>

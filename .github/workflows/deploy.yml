@@ -32,7 +32,7 @@ jobs:
           protocol: ftps
           port: 21
           #local-dir: ./   # termina com /
-          server-dir: ./   # termina com /
+          server-dir: ../   # termina com /
           # server-dir: /public_htmlx/   # termina com /
           exclude: |
             **/.git*

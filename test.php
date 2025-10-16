@@ -1,3 +1,4 @@
 <?php
-echo "Teste do ficheiro no servidor unico";
+
+echo "Deploy feito...";
 ?>

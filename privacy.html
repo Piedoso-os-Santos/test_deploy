@@ -533,6 +533,29 @@
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
 
+  <script>
+  const toggleBtn = document.getElementById('theme-toggle');
+  const htmlEl = document.documentElement;
+
+  // Detectar tema salvo
+  if (localStorage.getItem('theme') === 'dark') {
+    htmlEl.setAttribute('data-theme', 'dark');
+    toggleBtn.innerHTML = '<i class="bi bi-sun"></i>';
+  }
+
+  toggleBtn.addEventListener('click', () => {
+    if (htmlEl.getAttribute('data-theme') === 'dark') {
+      htmlEl.removeAttribute('data-theme');
+      localStorage.setItem('theme', 'light');
+      toggleBtn.innerHTML = '<i class="bi bi-moon"></i>';
+    } else {
+      htmlEl.setAttribute('data-theme', 'dark');
+      localStorage.setItem('theme', 'dark');
+      toggleBtn.innerHTML = '<i class="bi bi-sun"></i>';
+    }
+    });
+  </script>
+
 </body>
 
 </html>

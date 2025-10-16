@@ -28,13 +28,7 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: Devin
-  * Template URL: https://bootstrapmade.com/devin-bootstrap-template/
-  * Updated: Jul 23 2025 with Bootstrap v5.3.7
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+
 </head>
 
 <body class="service-details-page">
@@ -706,6 +700,29 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <script>
+  const toggleBtn = document.getElementById('theme-toggle');
+  const htmlEl = document.documentElement;
+
+  // Detectar tema salvo
+  if (localStorage.getItem('theme') === 'dark') {
+    htmlEl.setAttribute('data-theme', 'dark');
+    toggleBtn.innerHTML = '<i class="bi bi-sun"></i>';
+  }
+
+  toggleBtn.addEventListener('click', () => {
+    if (htmlEl.getAttribute('data-theme') === 'dark') {
+      htmlEl.removeAttribute('data-theme');
+      localStorage.setItem('theme', 'light');
+      toggleBtn.innerHTML = '<i class="bi bi-moon"></i>';
+    } else {
+      htmlEl.setAttribute('data-theme', 'dark');
+      localStorage.setItem('theme', 'dark');
+      toggleBtn.innerHTML = '<i class="bi bi-sun"></i>';
+    }
+    });
+  </script>
 
 </body>
 
